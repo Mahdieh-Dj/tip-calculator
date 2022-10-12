@@ -1,0 +1,109 @@
+body {
+  background: linear-gradient(to left, #ccccff 0%, #639dd8 100%);
+  font-weight: 800;
+}
+.window-box {
+  border-bottom: 1px solid black;
+  padding: 10px;
+  height: 40px;
+  width: 90%;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0 15px;
+}
+.show-panel :last-child {
+  border: none;
+}
+.calc-container {
+  display: flex;
+  justify-content: center;
+  width: 700px;
+  height: 350px;
+  margin: 0 auto;
+  margin-top: 30px;
+  border-radius: 10px;
+  background-color: #fbfafa;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+.input-panel {
+  width: 50%;
+  padding: 30px 60px;
+  display: flex;
+  flex-direction: column;
+}
+#submit-btn {
+  align-self: center;
+  background: #38123c;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-top: 30px;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.show-panel {
+  width: 50%;
+  padding: 30px 60px;
+}
+.vertical-line {
+  border-left: 3px solid #410c46;
+  height: 80%;
+  left: 50%;
+  margin-left: -3px;
+  top: 10%;
+  position: absolute;
+  border-radius: 30%;
+}
+.range-input {
+  appearance: none;
+  height: 7px;
+  border-radius: 5px;
+  background-color: #410c46;
+  outline: none;
+}
+.range-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #a83348;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  border-bottom-color: rgba(0, 0, 0, 0.42);
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0px 16px 6px;
+  transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  border-bottom: 1px solid;
+  border-radius: 4px 4px 0 0;
+  outline: none;
+  background-color: inherit;
+}
+input[type="number"]:focus {
+  border-bottom: 2px solid;
+}
+
+@media screen and (max-width: 768px) {
+  .calc-container {
+    flex-direction: column;
+    width: 95%;
+    height: unset;
+    justify-content: center;
+    align-items: center;
+  }
+  .horinzental-line {
+    width: 90%;
+    border-radius: 30%;
+    height: 2px;
+    background-color: #410c46;
+  }
+  .vertical-line {
+    display: none;
+  }
+}
